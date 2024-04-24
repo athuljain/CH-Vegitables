@@ -28,7 +28,7 @@ const CHNavbar = () => {
                 <Nav.Link href="/about" className="nav-link">About</Nav.Link>
                 <NavDropdown title="CH" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="/staff">Staff</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+                  <NavDropdown.Item href="/gallery">Gallery</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
                 </NavDropdown>
