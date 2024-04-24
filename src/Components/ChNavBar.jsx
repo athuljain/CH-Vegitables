@@ -27,7 +27,7 @@ const CHNavbar = () => {
               <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px', marginRight: '20px' }} navbarScroll>
                 <Nav.Link href="/about" className="nav-link">About</Nav.Link>
                 <NavDropdown title="CH" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Staff</NavDropdown.Item>
+                  <NavDropdown.Item href="/staff">Staff</NavDropdown.Item>
                   <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
