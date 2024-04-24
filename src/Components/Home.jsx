@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CHImg3 from '../Assets/CHImg3.jpeg';
-import ChLogo from '../Assets/CHLogo.jpeg'
+// import ChLogo from '../Assets/CHLogo.jpeg'
 import { Carousel } from 'react-bootstrap';
 import '../Styles/Home.css'; 
 
@@ -46,7 +46,7 @@ const Home = () => {
         <div className='subDiv'>
         <CardGroup>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src={CHImg3} />
         <Card.Body>
           <Card.Title>Card title</Card.Title>
           <Card.Text>
@@ -59,7 +59,7 @@ const Home = () => {
         </Card.Footer>
       </Card>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src={CHImg3} />
         <Card.Body>
           <Card.Title>Card title</Card.Title>
           <Card.Text>
@@ -72,7 +72,7 @@ const Home = () => {
         </Card.Footer>
       </Card>
       <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src={CHImg3} />
         <Card.Body>
           <Card.Title>Card title</Card.Title>
           <Card.Text>

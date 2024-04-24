@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../Styles/ChNavBar.css';
+import { Link } from 'react-router-dom';
 
 const CHNavbar = () => {
   return (
@@ -17,14 +18,14 @@ const CHNavbar = () => {
               alt="CH Logo"
               className="logo-img"
             />
-            <h4 className="ch-vegetables">CH Vegetables</h4>
+           <Link style={{textDecoration:"none"}} to={'/'}> <h4 className="ch-vegetables">CH Vegetables</h4></Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll" className="navbar-collapse">
             {/* Utilize ms-auto to push these links to the right */}
             <Nav className="ms-auto" navbarScroll>
               <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px', marginRight: '20px' }} navbarScroll>
-                <Nav.Link href="#action1" className="nav-link">About</Nav.Link>
+                <Nav.Link href="/about" className="nav-link">About</Nav.Link>
                 <NavDropdown title="CH" id="navbarScrollingDropdown">
                   <NavDropdown.Item href="#action3">Staff</NavDropdown.Item>
                   <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
