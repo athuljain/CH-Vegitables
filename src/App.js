@@ -9,15 +9,17 @@ import { StaffDetails } from './Assets/Staff';
 import Staff from './Components/Staff';
 import { useState } from 'react';
 import { myContext } from './Context';
-
+import Gallery from './Components/Gallery';
+import {GalleryData} from './Assets/Gallery'
 function App() {
 
   const [staffData,setStaffData]=useState(StaffDetails)
-
+const [galleryImages,setGalleryImages]=useState(GalleryData)
 // console.log(staffData);
-
+console.log(galleryImages);
 const values={
-  staffData,setStaffData
+  staffData,setStaffData,
+  galleryImages,setGalleryImages
 
 }
   return (
@@ -32,7 +34,9 @@ const values={
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<AboutUs />}/>
-        <Route path='/staff' element={<Staff data={staffData} />}/>
+        <Route path='/staff' element={<Staff  />}/>
+        <Route path='/gallery' element={<Gallery/>}/>
+
       </Routes>
       </myContext.Provider>
       </BrowserRouter>
