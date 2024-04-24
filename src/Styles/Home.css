@@ -1,39 +1,67 @@
+/* .main-div{
+  height:1700px;
+
+  height: auto;
+  display:flex;
+  flex-direction: column;
+}
+.carousel-div{
+  height: 500px
+}
+
 .custom-carousel {
     height: 250px; /* Adjust the height as needed */
-  }
-  .sec-sub-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: slideIn 1s forwards; /* Add animation for sliding in */
-  }
   
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-50%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .left-content {
-    margin-right: 20px; /* Adjust the margin as needed */
-  }
-  
-  .right-content {
-    text-align: right;
-  }
-  .image {
-    max-width: 100px;  /* Adjust the max-width as needed */
-    height: auto;  /* Maintain aspect ratio */
-  }
 
-  .bottom-outside-container {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .main-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .carousel-div {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    
+    .custom-carousel .carousel-item {
+      transition: transform 1s ease;
+    }
+    
+    .subDiv {
+      width: 80%;
+    }
+    
+    /* Animation for carousel items */
+    .custom-carousel .carousel-item {
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+    
+    .custom-carousel .carousel-item.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+    
+    /* Styling for cards */
+    .card {
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-title {
+      font-size: 1.5rem;
+    }
+    
+    .card-text {
+      font-size: 1rem;
+    }
+    
+    /* Hover effect on cards */
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+    

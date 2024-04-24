@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import CHImg3 from '../Assets/CHImg3.jpeg';
-// import CHLogo from '../Assets/CHLogo.jpeg'
+import ChLogo from '../Assets/CHLogo.jpeg'
 import { Carousel } from 'react-bootstrap';
 import '../Styles/Home.css'; 
-import HomeSub from './HomeSubPart';
+
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 const Home = () => {
     const [index, setIndex] = useState(0);
@@ -39,9 +41,52 @@ const Home = () => {
             </Carousel.Item>
           </Carousel>
         </div>
-        
 
-      <HomeSub />
+        
+        <div className='subDiv'>
+        <CardGroup>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This card has supporting text below as a natural lead-in to
+            additional content.{' '}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+    </CardGroup>
+        </div>
       </div>
     );
 }
