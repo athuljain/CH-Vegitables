@@ -6,6 +6,7 @@ import '../Styles/Home.css';
 
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import AboutUs from './AboutUs';
 
 const Home = () => {
     const [index, setIndex] = useState(0);
@@ -86,6 +87,15 @@ const Home = () => {
         </Card.Footer>
       </Card>
     </CardGroup>
+
+
+<div>
+  <br></br>
+  <AboutUs />
+</div>
+
+
+
         </div>
       </div>
     );

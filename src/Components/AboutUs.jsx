@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image, Card, CardGroup } from 'react-bootstrap';
 import CHAboutImg from '../Assets/CHImg3.jpeg';
+//  import CHBackground1 from '../Assets/CHBackground.jpg';
 
 const AboutUs = () => {
   const images = [
@@ -12,8 +13,9 @@ const AboutUs = () => {
     // Add more image objects as needed
   ];
 
+
   const imageStyle = {
-    width: '350px', // Adjust width as desired
+    width: '250px', // Adjust width as desired
     height: '250px', // Adjust height as desired
     objectFit: 'cover', // Ensures image fills card area while maintaining aspect ratio
     display: 'flex',
@@ -30,6 +32,7 @@ const AboutUs = () => {
 
   return (
     <Container fluid className="about-us">
+    {/* <Container fluid className="about-us" style={backgroundImageStyle}> */}
       <Row>
         <Col md={6} className="about-us-text">
           <h1>About Us</h1>
