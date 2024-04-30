@@ -11,13 +11,17 @@ const Gallery = () => {
   const handleSelect = (selectedIndex, event) => {
     setCurrentIndex(selectedIndex);
   };
+  const carouselStyle = {
+
+    height: '500px', // Adjust height as needed
+  };
   
   return (
     <Container fluid className="gallery">
       {/* Carousel at the top */}
       <Row>
         <Col md={12}>
-          <Carousel activeIndex={currentIndex} onSelect={handleSelect}>
+          <Carousel activeIndex={currentIndex} onSelect={handleSelect}   style={carouselStyle}>
             {galleryImages.slice(0, 3).map((image, index) => (
                  
               <Carousel.Item key={index}>
