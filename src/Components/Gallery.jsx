@@ -24,7 +24,7 @@ const Gallery = () => {
                 
                 <img
                   className="d-block w-100"
-                  src={image.Photo} // Use 'Photo' for image source
+                  src={image.Photo} 
                 
                   alt={image.Name || 'Gallery Image'}
                   
