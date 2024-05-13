@@ -33,7 +33,7 @@ const CHNavbar = () => {
                   <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="#action2" className="nav-link">Service</Nav.Link>
-                <Nav.Link href="#action2" className="nav-link">Contact</Nav.Link>
+                <Nav.Link href="/contact" className="nav-link">Contact</Nav.Link>
               </Nav>
             </Nav>
           </Navbar.Collapse>
