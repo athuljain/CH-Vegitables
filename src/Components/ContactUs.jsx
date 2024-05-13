@@ -60,7 +60,7 @@ export default function ContactUs() {
                                             <h4>Address:</h4>
                                         </div>
                                         <div className="text">
-                                            <p>Lorem Ipsum, 40C, Lorem Ipsum dummy,<br /> Lorem Ipsum, Ch 98054</p>
+                                            <p>CH Vegitables<br />Kerala,Karrnataka</p>
                                         </div>
                                     </li>
                                     <li>

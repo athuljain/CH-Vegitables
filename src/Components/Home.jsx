@@ -7,6 +7,8 @@ import '../Styles/Home.css';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import AboutUs from './AboutUs';
+import Gallery from './Gallery';
+import ContactUs from './ContactUs';
 
 const Home = () => {
     const [index, setIndex] = useState(0);
@@ -92,6 +94,12 @@ const Home = () => {
 <div>
   <br></br>
   <AboutUs />
+  <br></br>
+  <Gallery />
+
+  <br></br>
+  <ContactUs />
+  
 </div>
 
 

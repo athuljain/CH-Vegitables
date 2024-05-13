@@ -18,6 +18,7 @@ const Gallery = () => {
   
   return (
     <Container fluid className="gallery">
+      <h1>Gellery</h1>
       {/* Carousel at the top */}
       <Row>
         <Col md={12}>
