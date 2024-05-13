@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { myContext } from './Context';
 import Gallery from './Components/Gallery';
 import {GalleryData} from './Assets/Gallery'
+import ContactUs from './Components/ContactUs';
 function App() {
 
   const [staffData,setStaffData]=useState(StaffDetails)
@@ -36,6 +37,7 @@ const values={
         <Route path='/about' element={<AboutUs />}/>
         <Route path='/staff' element={<Staff  />}/>
         <Route path='/gallery' element={<Gallery/>}/>
+        <Route path='/contact' element={<ContactUs />}/>
 
       </Routes>
       </myContext.Provider>
