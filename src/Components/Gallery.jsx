@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Container, Row, Col, Carousel, Card, CardImg, CardGroup } from 'react-bootstrap';
+import { GalleryData } from '../Assets/GalleryData'; // Import the GalleryData array
 import { myContext } from '../Context';
+
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,28 +13,22 @@ const Gallery = () => {
   const handleSelect = (selectedIndex, event) => {
     setCurrentIndex(selectedIndex);
   };
-  const carouselStyle = {
 
-    height: '500px', // Adjust height as needed
-  };
+  
   
   return (
     <Container fluid className="gallery">
-      <h1>Gellery</h1>
+      <h1>Gallery</h1>
       {/* Carousel at the top */}
       <Row>
         <Col md={12}>
-          <Carousel activeIndex={currentIndex} onSelect={handleSelect}   style={carouselStyle}>
-            {galleryImages.slice(0, 3).map((image, index) => (
-                 
+          <Carousel activeIndex={currentIndex} onSelect={handleSelect} >
+            {GalleryData.slice(0, 3).map((image, index) => (
               <Carousel.Item key={index}>
-                
                 <img
                   className="d-block w-100"
-                  src={image.Photo} 
-                
-                  alt={image.Name || 'Gallery Image'}
-                  
+                  src={image.src}
+                  alt={image.alt || 'Gallery Image'}
                 />
               </Carousel.Item>
             ))}
@@ -40,18 +36,20 @@ const Gallery = () => {
         </Col>
       </Row>
 
-      {/* Image mapping at the bottom */}
+      {/* Image list after the carousel */}
       <Row className="image-list">
-        <CardGroup>
-          {galleryImages.map((image, index) => (
-            <Col key={index} md={3}>
-              <Card>
-               
-                <CardImg variant="top" src={image.Photo} alt={image.Name + 'Photo'} />
-              </Card>
-            </Col>
-          ))}
-        </CardGroup>
+        <Col md={12}>
+          <h2>Image List</h2>
+          <CardGroup>
+            {GalleryData.map((image, index) => (
+              <Col key={index} md={3}>
+                <Card>
+                  <CardImg variant="top" src={image.src} alt={image.alt + ' Photo'} />
+                </Card>
+              </Col>
+            ))}
+          </CardGroup>
+        </Col>
       </Row>
     </Container>
   );

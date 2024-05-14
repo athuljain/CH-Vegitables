@@ -10,7 +10,7 @@ import Staff from './Components/Staff';
 import { useState } from 'react';
 import { myContext } from './Context';
 import Gallery from './Components/Gallery';
-import {GalleryData} from './Assets/Gallery'
+import {GalleryData} from './Assets/GalleryData'
 import ContactUs from './Components/ContactUs';
 function App() {
 
