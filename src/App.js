@@ -12,6 +12,7 @@ import { myContext } from './Context';
 import Gallery from './Components/Gallery';
 import {GalleryData} from './Assets/GalleryData'
 import ContactUs from './Components/ContactUs';
+import ServicePage from './Components/ServicePage';
 function App() {
 
   const [staffData,setStaffData]=useState(StaffDetails)
@@ -38,7 +39,7 @@ const values={
         <Route path='/staff' element={<Staff  />}/>
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/contact' element={<ContactUs />}/>
-
+        <Route path='/services' element={<ServicePage />}/>
       </Routes>
       </myContext.Provider>
       </BrowserRouter>

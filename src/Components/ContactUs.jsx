@@ -52,7 +52,7 @@ export default function ContactUs() {
                         {/* End Single Contact Address Box */}
                         {/* Single Contact Address Box */}
                         <div className="col-sm-4 single-contact-address-box main-branch">
-                            <h3>Lorem Ipsum</h3>
+                            <h3>CH Vegitables</h3>
                             <div className="inner">
                                 <ul>
                                     <li>
@@ -93,7 +93,7 @@ export default function ContactUs() {
                                     <span className="path4"></span>
                                 </span>
                             </div>
-                            <h3>Lorem Ipsum</h3>
+                            <h3>CH Vegitables</h3>
                             <h2>Lorem Ipsum is simply dummy</h2>
                         </div>
                         {/* End Single Contact Address Box */}
