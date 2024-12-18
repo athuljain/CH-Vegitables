@@ -16,7 +16,7 @@ export default function ContactUs() {
                             <div className="decor-right"><span></span></div>
                         </div>
                         <div className="bottom-text">
-                            <p>Fixyman is proud to be the name that nearly 1 million homeowners have trusted since 1996 for home improvement and repair, providing virtually any home repair.</p>
+                            <p>Our mission is simple: to offer fresh, healthy, and affordable vegetables while building strong connections with our customers and growers. At CH Vegetables, we’re not just about selling vegetables; we’re about creating partnerships that nourish families and support communities.</p>
                         </div>
                     </div>
                     <div className="contact-address-box row">
@@ -46,8 +46,8 @@ export default function ContactUs() {
                                     <span className="path20"></span>
                                 </span>
                             </div>
-                            <h3>Lorem Ipsum</h3>
-                            <h2>Lorem Ipsum is simply dummy</h2>
+                            <h3>Choose CH Vegetables</h3>
+                            <h2>Your Partner in Freshness and Quality!y</h2>
                         </div>
                         {/* End Single Contact Address Box */}
                         {/* Single Contact Address Box */}
@@ -60,7 +60,7 @@ export default function ContactUs() {
                                             <h4>Address:</h4>
                                         </div>
                                         <div className="text">
-                                            <p>CH Vegitables<br />Kerala,Karrnataka</p>
+                                            <p>CH Vegitables<br /> Kerala, Karnataka</p>
                                         </div>
                                     </li>
                                     <li>
@@ -68,7 +68,7 @@ export default function ContactUs() {
                                             <h4>Ph & Fax:</h4>
                                         </div>
                                         <div className="text">
-                                            <p>+123 456 789 <br /> test@info.com</p>
+                                            <p>+91 95393 32707 <br /> chvegitables.com</p>
                                         </div>
                                     </li>
                                     <li>
@@ -76,7 +76,7 @@ export default function ContactUs() {
                                             <h4>Office Hrs:</h4>
                                         </div>
                                         <div className="text">
-                                            <p>Mon-Fri: 9:30am - 6:30pm<br /> Sat-Sun: Closed</p>
+                                            <p>Mon-Sat: 9:00am - 11:00pm<br /> </p>
                                         </div>
                                     </li>
                                 </ul>
@@ -94,7 +94,7 @@ export default function ContactUs() {
                                 </span>
                             </div>
                             <h3>CH Vegitables</h3>
-                            <h2>Lorem Ipsum is simply dummy</h2>
+                            <h2>10+ Years of Freshness You Can Trust!</h2>
                         </div>
                         {/* End Single Contact Address Box */}
                     </div>
@@ -118,7 +118,7 @@ export default function ContactUs() {
                                             </div>
                                         </div>
                                         <div className="text-box float-right">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                            <p>CH Vegetables – Your Trusted Partner for Fresh Produce!</p>
                                         </div>
                                     </div>
                                 </div>
