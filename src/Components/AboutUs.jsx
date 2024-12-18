@@ -9,7 +9,7 @@ const AboutUs = () => {
     { src: require('../Assets/CHImg1.jpg'), alt: 'Image 2' },
     { src: require('../Assets/CHImg3.jpeg'), alt: 'Image 3' },
     { src: require('../Assets/CHImg1.jpg'), alt: 'Image 2' },
-    { src: require('../Assets/CHImg1.jpg'), alt: 'Image 2' },
+    // { src: require('../Assets/CHImg1.jpg'), alt: 'Image 2' },
     // Add more image objects as needed
   ];
 
@@ -37,7 +37,7 @@ const AboutUs = () => {
         <Col md={6} className="about-us-text">
           <h1>About Us</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque placerat magna eget eros euismod, vitae semper magna tincidunt. Donec euismod bibendum laoreet. Integer posuere erat a ante pulvinar, eget laoreet sapien consectetur. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque lorem quam, vehicula velit eu, vehicula rutrum libero. Fusce eget dolor lorem. Maecenas pretium tellus eget risus fringilla tincidunt. Curabitur aliquet quam id dui posuere blandit.
+          At CH Vegetables, we take pride in over a decade of experience delivering the freshest, highest-quality vegetables to our valued customers. With 10+ years in the wholesale and retail vegetable industry, we have built a strong reputation for excellence and reliability.
           </p>
         </Col>
         <Col md={6} className="about-us-image">

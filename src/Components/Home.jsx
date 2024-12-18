@@ -24,22 +24,22 @@ const Home = () => {
             <Carousel.Item>
               <img src={CHImg3} className="d-block w-100" alt="First slide" />
               <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <h3 style={{color:"green"}}>Welcome to CH Vegetables</h3>
+                <p style={{color:"green"}} >Freshness Delivered with Care!</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img src={CHImg3} className="d-block w-100" alt="Second slide" />
               <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3 style={{color:"green"}}>Choose CH Vegetables</h3>
+                <p style={{color:"green"}}>Your Partner in Freshness and Quality!</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img src={CHImg3} className="d-block w-100" alt="Third slide" />
               <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <h3 style={{color:"green"}}>At CH Vegetables</h3>
+                <p style={{color:"green"}}>we believe in fostering lasting relationships with our customers, suppliers, and communities.</p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
@@ -51,10 +51,9 @@ const Home = () => {
       <Card>
         <Card.Img variant="top" src={CHImg3} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>At CH Vegetables</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+          we go beyond just selling vegetables – we’re here to support healthy lifestyles and sustainable practices for the betterment of our communities.
           </Card.Text>
         </Card.Body>
         <Card.Footer>
@@ -64,10 +63,9 @@ const Home = () => {
       <Card>
         <Card.Img variant="top" src={CHImg3} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Experience freshness and quality</Card.Title>
           <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
+          Experience freshness and quality like never before with CH Vegetables – Where Trust Meets Freshness!{' '}
           </Card.Text>
         </Card.Body>
         <Card.Footer>
@@ -77,11 +75,9 @@ const Home = () => {
       <Card>
         <Card.Img variant="top" src={CHImg3} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>CH Vegetables<br />10+ Years of Freshness You Can Trust!</Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
+          Choose CH Vegetables for unmatched quality, trust, and freshness – every time!
           </Card.Text>
         </Card.Body>
         <Card.Footer>

@@ -27,6 +27,7 @@ const Staff = () => {
               <CardBody>
                 <CardTitle>{staff.Name}</CardTitle>
                 <CardText>{staff.Role}</CardText>
+                <CardText>{staff.ContactNum}</CardText>
               </CardBody>
             </Card>
           </Col>
