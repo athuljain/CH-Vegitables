@@ -1,0 +1,166 @@
+/* --- Section Global Settings --- */
+.staff-section-wrapper {
+  padding: 4rem 0;
+  background: transparent;
+}
+
+/* --- Section Structural Header Labels --- */
+.staff-badge {
+  color: #D4AF37; /* Metallic Luxury Gold Accent */
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.staff-main-title {
+  color: #F4F6F4;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.staff-gold-line {
+  width: 50px;
+  height: 3px;
+  background: #D4AF37;
+  margin: 1.2rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.staff-subtitle {
+  color: #A3B899; /* Smooth Soft Sage Gray-Green text */
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.7;
+}
+
+/* --- Premium Luxury Team Profile Cards --- */
+.premium-staff-card {
+  background: rgba(20, 71, 47, 0.25) !important; /* Unified late dark green glass layout profile */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 246, 244, 0.06) !important;
+  border-radius: 24px !important;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rounded Profile Frame Image Block */
+.staff-avatar-container {
+  position: relative;
+  width: 100%;
+  height: 280px; /* Forces identical proportions across different image uploads */
+  overflow: hidden;
+  background-color: rgba(11, 47, 29, 0.5);
+}
+
+.staff-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Linear bottom vignette contrast layer over image */
+.avatar-glass-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(11, 47, 29, 0.5) 100%);
+}
+
+/* Card Information Meta Body Text fields */
+.staff-card-body {
+  padding: 2rem 1.5rem !important;
+}
+
+.staff-member-name {
+  color: #F4F6F4;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
+}
+
+.staff-role-badge {
+  display: inline-block;
+  background: rgba(212, 175, 55, 0.1); /* Transparent gold background capsule */
+  color: #D4AF37;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.35rem 1.2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  margin-bottom: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.staff-member-contact {
+  color: #B2C4AD !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.phone-icon-accent {
+  font-size: 0.85rem;
+  margin-right: 4px;
+  opacity: 0.8;
+}
+
+/* --- Interactive Active Hover Transitions States --- */
+.premium-staff-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(212, 175, 55, 0.4) !important; /* Gold border pop illumination */
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.5);
+}
+
+.premium-staff-card:hover .staff-profile-img {
+  transform: scale(1.06); /* Slow rich cinematic profile image scaling zoom */
+}
+
+.premium-staff-card:hover .staff-member-name {
+  color: #D4AF37; /* Name shifts to luxurious gold font */
+}
+
+.premium-staff-card:hover .staff-role-badge {
+  background: #D4AF37;
+  color: #0B2F1D; /* Colors flip cleanly on active card selection states */
+}
+
+/* --- Viewport Adaptive Dynamic Responsive Breakdown Filters --- */
+@media (max-width: 991.98px) {
+  .staff-main-title {
+    font-size: 1.95rem;
+  }
+  .staff-subtitle {
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+  }
+  .staff-avatar-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .staff-section-wrapper {
+    padding: 3rem 0;
+  }
+  .premium-staff-card {
+    border-radius: 18px !important;
+  }
+  .staff-avatar-container {
+    height: 280px; /* Maximizes frame viewport cleanly on tight layout stacks */
+  }
+}

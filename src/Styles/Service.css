@@ -1,43 +1,145 @@
-.services {
-    padding: 20px;
-    background-color: #f7f7f7;
+/* --- Core Section Structural Container --- */
+.services-section-wrapper {
+  padding: 4rem 0;
+  background: transparent;
+}
+
+/* --- Typography & Branding Headings --- */
+.services-badge {
+  color: #D4AF37; /* Branding Premium Gold */
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.services-main-title {
+  color: #F4F6F4;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.services-gold-line {
+  width: 50px;
+  height: 3px;
+  background: #D4AF37;
+  margin: 1.2rem auto 1.5rem auto;
+  border-radius: 2px;
+}
+
+.services-subtitle {
+  color: #A3B899; /* Pale Muted Sage Green */
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.6;
+}
+
+/* --- Premium Interactive Cards Grid Matrix --- */
+.premium-service-card {
+  background: rgba(20, 71, 47, 0.3); /* Premium Late Dark Green glass card base */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(244, 246, 244, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image Enclosure Layer */
+.service-img-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Soft elegant gradient shadow running over the images */
+.service-image-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(11, 47, 29, 0) 60%, rgba(11, 47, 29, 0.4) 100%);
+}
+
+/* Card Information Body Frame */
+.service-card-body {
+  padding: 1.8rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-title {
+  color: #F4F6F4;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.service-card-description {
+  color: #B2C4AD; /* Soft readable grayish-sage */
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Interactive Active Hover Transitions --- */
+.premium-service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(212, 175, 55, 0.35); /* Subtle Golden Border highlight on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.premium-service-card:hover .service-card-image {
+  transform: scale(1.08); /* Slow, rich smooth zoom zoom */
+}
+
+.premium-service-card:hover .service-card-title {
+  color: #D4AF37; /* Title text glows luxury gold */
+}
+
+/* --- Viewport Adaptive Layout Filters --- */
+@media (max-width: 991.98px) {
+  .services-main-title {
+    font-size: 1.9rem;
   }
-  
-  .services-header {
-    text-align: center;
-    margin-bottom: 30px;
+  .services-subtitle {
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
   }
-  
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  .service-img-container {
+    height: 180px;
   }
-  
-  .service-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 576px) {
+  .services-section-wrapper {
+    padding: 3rem 0;
   }
-  
-  .service-image {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
+  .services-main-title {
+    font-size: 1.7rem;
   }
-  
-  .service-title {
-    font-size: 1.5em;
-    color: #333;
+  .premium-service-card {
+    border-radius: 16px;
   }
-  
-  .service-description {
-    font-size: 1em;
-    color: #555;
+  .service-img-container {
+    height: 220px; /* Expands container gracefully on full-width mobile cards layout stacks */
   }
-  
+}

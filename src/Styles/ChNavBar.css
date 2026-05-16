@@ -1,93 +1,168 @@
-/* Import the Roboto font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-/* Apply the Roboto font to the "CH Vegetables" title */
-.ch-vegetables {
-  font-family: 'Roboto', sans-serif;
-  color: #006400; /* Set the text color to dark green */
-  animation: fadeIn 1s ease; /* Add fadeIn animation */
-}
-.navbar-collapse {
-    padding: 10px; /* Add padding to create margins around the contents */
-  }
-  
-
-/* Navbar Styling */
+/* --- Navbar Container Style --- */
 .custom-navbar {
-  background-color: #08693d; /* Set the background color to green */
-  height: 100px; /* Increase the height of the Navbar */
-  animation: slideInTop 1s ease; /* Add slideInTop animation */
+  background: rgba(11, 47, 29, 0.9) !important; /* Premium Late Dark Green */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15); /* Soft Gold border line */
+  padding: 0.8rem 2rem !important;
+  transition: all 0.3s ease;
+  z-index: 1050;
 }
 
+/* --- Brand Logo & Text --- */
 .logo-container {
   display: flex;
   align-items: center;
+  gap: 12px;
+  text-decoration: none !important;
 }
 
 .logo-img {
-  width: 50px; /* Adjust the size of the logo as needed */
-  height: 50px;
-  border-radius: 50%; /* Convert the logo into a circle shape */
-  margin-right: 10px; /* Add some margin for spacing */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #D4AF37; /* Metallic Gold Accent */
+  transition: transform 0.4s ease;
 }
 
-.logo-img img {
-  width: 100%;
-  height: 100%;
+.logo-container:hover .logo-img {
+  transform: rotate(15deg) scale(1.05);
 }
 
-.custom-navbar .navbar-toggler {
-  border-color: hsl(124, 100%, 13%); /* Set the color of the toggler icon */
+.ch-vegetables {
+  color: #F4F6F4 !important;
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
-.custom-navbar .navbar-toggler-icon {
-  background-color: #240202; /* Set the color of the toggler icon */
+.logo-container:hover .ch-vegetables {
+  color: #D4AF37 !important; /* Glows Gold on Hover */
 }
 
-.nav-link {
-  color: #04a714 !important; /* Set the color of the Navbar links to white */
-  animation: slideInRight 1s ease; /* Add slideInRight animation */
+/* --- Navigation Links --- */
+.custom-link {
+  color: #A3B899 !important; /* Subtle muted pale sage green */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem !important;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #0c4101 !important; /* Change the color of the Navbar links on hover */
-  animation: pulse 0.5s infinite alternate; /* Add pulse animation on hover */
+.custom-link:hover {
+  color: #D4AF37 !important;
 }
 
-/* CSS Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+/* Animated Golden Link Underlines */
+.custom-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 2px;
+  left: 50%;
+  background-color: #D4AF37;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-link:hover::after,
+.active-link::after {
+  width: 60%;
+}
+
+.active-link {
+  color: #D4AF37 !important;
+  font-weight: 600;
+}
+
+/* --- Dropdown Modifications --- */
+.custom-dropdown .dropdown-toggle {
+  color: #A3B899 !important;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem !important;
+  transition: color 0.3s ease;
+}
+
+.custom-dropdown:hover .dropdown-toggle,
+.custom-dropdown .dropdown-toggle:focus {
+  color: #D4AF37 !important;
+}
+
+.custom-dropdown .dropdown-menu {
+  background-color: #14472F !important; /* Solid intermediate dark green */
+  border: 1px solid rgba(212, 175, 55, 0.2) !important;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.dropdown-custom-item {
+  color: #F4F6F4 !important;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.5rem !important;
+  transition: all 0.25s ease;
+}
+
+.dropdown-custom-item:hover {
+  background-color: #D4AF37 !important; /* Gold selection background */
+  color: #0B2F1D !important; /* Dark green text on hover selection */
+  font-weight: 500;
+}
+
+.dropdown-custom-divider {
+  border-top: 1px solid rgba(212, 175, 55, 0.15) !important;
+  margin: 0.4rem 0 !important;
+}
+
+/* --- Mobile Responsiveness Rules --- */
+.custom-toggler {
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+  padding: 0.4rem 0.6rem !important;
+}
+
+.custom-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.25) !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  /* Dynamic conversion of bootstrap standard hamburger menu to a bright gold color */
+  filter: invert(74%) sepia(51%) saturate(452%) hue-rotate(5deg) brightness(94%) contrast(92%);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #0B2F1D;
+    border-radius: 12px;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes slideInTop {
-  from {
-    transform: translateY(-50px);
-    opacity: 0;
+  .custom-link::after {
+    display: none; /* Turn off underlines for stacked block items on mobile screen viewports */
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slideInRight {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
+  .custom-link, .custom-dropdown .dropdown-toggle {
+    width: 100%;
+    padding: 0.8rem 1rem !important;
+    border-radius: 6px;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-@keyframes pulse {
-  to {
-    transform: scale(1.1);
+  .custom-link:hover, .custom-dropdown .dropdown-toggle:hover {
+    background: rgba(212, 175, 55, 0.05);
+  }
+  
+  .custom-dropdown .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    border: none !important;
+    box-shadow: none;
+    padding-left: 1rem;
   }
 }

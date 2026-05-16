@@ -1,114 +1,104 @@
 import React, { useState } from 'react';
+import { Carousel, Card, Row, Col, Container } from 'react-bootstrap';
 import CHImg3 from '../Assets/CHImg3.jpeg';
-// import ChLogo from '../Assets/CHLogo.jpeg'
-import { Carousel } from 'react-bootstrap';
-import '../Styles/Home.css'; 
-
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import AboutUs from './AboutUs';
 import Gallery from './Gallery';
 import ContactUs from './ContactUs';
 import ServicePage from './ServicePage';
+import '../Styles/Home.css'; 
 
 const Home = () => {
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex) => {
-      setIndex(selectedIndex);
-    };
-  
-    return (
-      <div className='main-div'>
-        <div className='carousel-div'>
-          <Carousel activeIndex={index} onSelect={handleSelect} className="custom-carousel">
-            <Carousel.Item>
-              <img src={CHImg3} className="d-block w-100" alt="First slide" />
-              <Carousel.Caption>
-                <h3 style={{color:"green"}}>Welcome to CH Vegetables</h3>
-                <p style={{color:"green"}} >Freshness Delivered with Care!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img src={CHImg3} className="d-block w-100" alt="Second slide" />
-              <Carousel.Caption>
-                <h3 style={{color:"green"}}>Choose CH Vegetables</h3>
-                <p style={{color:"green"}}>Your Partner in Freshness and Quality!</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img src={CHImg3} className="d-block w-100" alt="Third slide" />
-              <Carousel.Caption>
-                <h3 style={{color:"green"}}>At CH Vegetables</h3>
-                <p style={{color:"green"}}>we believe in fostering lasting relationships with our customers, suppliers, and communities.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-        </div>
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
+  const carouselItems = [
+    {
+      title: "Welcome to CH Vegetables",
+      text: "Freshness Delivered with Care!"
+    },
+    {
+      title: "Choose CH Vegetables",
+      text: "Your Partner in Freshness and Quality!"
+    },
+    {
+      title: "At CH Vegetables",
+      text: "We believe in fostering lasting relationships with our customers, suppliers, and communities."
+    }
+  ];
+
+  const cardData = [
+    {
+      title: "At CH Vegetables",
+      text: "We go beyond just selling vegetables – we’re here to support healthy lifestyles and sustainable practices for the betterment of our communities."
+    },
+    {
+      title: "Experience Freshness",
+      text: "Experience freshness and quality like never before with CH Vegetables – Where Trust Meets Freshness!"
+    },
+    {
+      title: "10+ Years of Trust",
+      text: "Choose CH Vegetables for unmatched quality, trust, and freshness – every single time!"
+    }
+  ];
+
+  return (
+    <div className="main-wrapper">
+      {/* Hero Carousel Section */}
+      <section className="carousel-section">
+        <Carousel activeIndex={index} onSelect={handleSelect} className="custom-carousel" fade>
+          {carouselItems.map((item, idx) => (
+            <Carousel.Item key={idx}>
+              <div className="carousel-img-container">
+                <img src={CHImg3} className="d-block w-100 carousel-img" alt={`Slide ${idx + 1}`} />
+              </div>
+              <Carousel.Caption className="custom-caption animate-fade-in">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </section>
+
+      {/* Main Content Section */}
+      <Container fluid className="content-container">
         
-        <div className='subDiv'>
-        <CardGroup>
-      <Card>
-        <Card.Img variant="top" src={CHImg3} />
-        <Card.Body>
-          <Card.Title>At CH Vegetables</Card.Title>
-          <Card.Text>
-          we go beyond just selling vegetables – we’re here to support healthy lifestyles and sustainable practices for the betterment of our communities.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src={CHImg3} />
-        <Card.Body>
-          <Card.Title>Experience freshness and quality</Card.Title>
-          <Card.Text>
-          Experience freshness and quality like never before with CH Vegetables – Where Trust Meets Freshness!{' '}
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src={CHImg3} />
-        <Card.Body>
-          <Card.Title>CH Vegetables<br />10+ Years of Freshness You Can Trust!</Card.Title>
-          <Card.Text>
-          Choose CH Vegetables for unmatched quality, trust, and freshness – every time!
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
+        {/* Features Cards Grid */}
+        <section className="cards-section">
+          <Row xs={1} md={3} className="g-4">
+            {cardData.map((card, idx) => (
+              <Col key={idx} className="animate-on-scroll">
+                <Card className="custom-card h-100">
+                  <div className="card-img-hover">
+                    <Card.Img variant="top" src={CHImg3} />
+                  </div>
+                  <Card.Body>
+                    <Card.Title>{card.title}</Card.Title>
+                    <Card.Text>{card.text}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer className="custom-footer">
+                    <small>Premium Quality Guaranteed</small>
+                  </Card.Footer>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </section>
 
-
-<div>
-  <br></br>
-  <AboutUs />
-  <br></br>
-<ServicePage />
-<br />
-
-
-
-  <Gallery />
-
-  <br></br>
-  <ContactUs />
-  
-</div>
-
-
-
+        {/* Dynamic Nested Components */}
+        <div className="sub-components-layout">
+          <section className="section-wrapper"><AboutUs /></section>
+          <section className="section-wrapper"><ServicePage /></section>
+          <section className="section-wrapper"><Gallery /></section>
+          <section className="section-wrapper"><ContactUs /></section>
         </div>
-      </div>
-    );
-}
+
+      </Container>
+    </div>
+  );
+};
 
 export default Home;

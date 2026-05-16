@@ -1,0 +1,189 @@
+/* --- Core Containers Configuration --- */
+.gallery-section {
+  background: transparent;
+  padding: 2rem 0;
+}
+
+/* --- Section Identity Headings --- */
+.gallery-badge {
+  color: #D4AF37; /* Signature Gold Accent */
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-main-title {
+  color: #F4F6F4;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.gallery-gold-line {
+  width: 50px;
+  height: 3px;
+  background: #D4AF37;
+  margin: 1.2rem auto 3.5rem auto;
+  border-radius: 2px;
+}
+
+/* --- Interactive Spotlight Carousel --- */
+.gallery-carousel-frame {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  background: rgba(11, 47, 29, 0.3);
+}
+
+.gallery-slider-img-wrap {
+  width: 100%;
+  height: 50vh;
+  min-height: 350px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.gallery-slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-slider-caption {
+  background: linear-gradient(to top, rgba(11, 47, 29, 0.95) 0%, rgba(11, 47, 29, 0) 100%);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  text-align: left;
+}
+
+.gallery-slider-caption h5 {
+  color: #D4AF37;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Customizing Bootstrap Slider Controls */
+.gallery-carousel-frame .carousel-indicators [data-bs-target] {
+  background-color: #D4AF37 !important;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* --- Grid Grid Presentation Block --- */
+.grid-showcase-container {
+  margin-top: 5rem;
+}
+
+.grid-section-title {
+  color: #F4F6F4;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-grid-card {
+  background: rgba(20, 71, 47, 0.35) !important; /* Premium sub-panel green overlay */
+  border: 1px solid rgba(244, 246, 244, 0.06) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-grid-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 260px; /* Forces standardized proportions */
+  overflow: hidden;
+}
+
+.gallery-grid-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* --- Animated Grid Hover Layers --- */
+.gallery-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 47, 29, 0.75); /* Dark Green Mask */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(3px);
+}
+
+.zoom-text-icon {
+  color: #D4AF37;
+  border: 1px solid #D4AF37;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  transform: translateY(15px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover States Combined */
+.gallery-grid-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.4) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-grid-card:hover .gallery-grid-img-wrap img {
+  transform: scale(1.1);
+}
+
+.gallery-grid-card:hover .gallery-grid-overlay {
+  opacity: 1;
+}
+
+.gallery-grid-card:hover .zoom-text-icon {
+  transform: translateY(0);
+}
+
+/* --- Viewport Adaptive Breakpoint Filters --- */
+@media (max-width: 991.98px) {
+  .gallery-slider-img-wrap {
+    height: 40vh;
+  }
+  .gallery-main-title {
+    font-size: 1.85rem;
+  }
+  .grid-showcase-container {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-slider-img-wrap {
+    height: 30vh;
+    min-height: 250px;
+  }
+  .gallery-grid-img-wrap {
+    height: 220px;
+  }
+  .gallery-gold-line {
+    margin-bottom: 2.5rem;
+  }
+}
